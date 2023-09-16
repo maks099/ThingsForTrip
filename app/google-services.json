@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "621561672632",
+    "project_id": "thingfortrip-9254d",
+    "storage_bucket": "thingfortrip-9254d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621561672632:android:c233c92709a59276be954d",
+        "android_client_info": {
+          "package_name": "com.example.thingsfortrip"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621561672632-h7rv5qq6g0kutq8d787jlncubkbpsc51.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmn2Akl_KPvhyJHZNWOc3S3EqBl6osNRo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621561672632-h7rv5qq6g0kutq8d787jlncubkbpsc51.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
