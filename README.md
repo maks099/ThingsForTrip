@@ -2,9 +2,9 @@
 An app for picking up things for a trip
 <br>
 <br>
-<img src='/images/1.png' width='300'>
-<img src='/images/2.png' width='300'>
-<img src='/images/3.png' width='300'>
+<img src='/images/1.png' width='200'>
+<img src='/images/2.png' width='200'>
+<img src='/images/3.png' width='200'>
 
 ## Features
 * view the weather anywhere in the world
