@@ -148,8 +148,14 @@ fun MainView(navController: NavController){
                 var address by remember {
                     mutableStateOf("")
                 }
+
+                var doSearch by remember {
+                    mutableStateOf(true)
+                }
                 address.useDebounce(onChange = {
-                    viewModel.setEvent(MainContract.Event.OnLocationInputChanged(address))
+                    if(doSearch){
+                        viewModel.setEvent(MainContract.Event.OnLocationInputChanged(address))
+                    }
                 })
 
                 OutlinedTextField(
@@ -158,6 +164,7 @@ fun MainView(navController: NavController){
                         Text(text = stringResource(id = R.string.input_location))
                     },
                     onValueChange = {
+                        doSearch = true
                         address = it
                     },
                     modifier = Modifier
@@ -173,7 +180,9 @@ fun MainView(navController: NavController){
                                 .fillMaxWidth()
                                 .padding(8.dp)
                                 .clickable {
+                                    doSearch = false
                                     viewModel.setEvent(MainContract.Event.OnLocationSelect(it))
+                                    address = it.address
                                 }
                         ) {
                             Text(
@@ -420,7 +429,7 @@ fun ThingListItem(thing: Thing, onCheckBoxChange: () -> Unit){
 
 @Composable
 fun <T> T.useDebounce(
-    delayMillis: Long = 5000L,
+    delayMillis: Long = 400L,
     coroutineScope: CoroutineScope = rememberCoroutineScope(),
     onChange: (T) -> Unit
 ): T{
