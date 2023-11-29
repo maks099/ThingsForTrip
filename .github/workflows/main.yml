@@ -9,7 +9,7 @@ on:
 
 jobs:
     linter_job:
-       runs-on: linux-latest
+       runs-on: ubuntu-latest
        steps:
          - name: Run a one-line script
            run: echo "Job start"
