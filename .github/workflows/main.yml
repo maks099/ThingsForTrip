@@ -2,8 +2,14 @@ name: FirstWorkflow
 on:
     push:
       branches: [ "main" ]
+      paths:
+        - "**/*.kt"
+        - ".github/workflows/main.yml"
     pull_request:
       branches: [ "main" ]
+      paths:
+          - "**/*.kt"
+          - ".github/workflows/main.yml"
 
 jobs:
 
