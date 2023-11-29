@@ -1,24 +1,32 @@
 name: FirstWorkflow
+
 on:
     push:
       branches: [ "main" ]
+      paths:
+          - "**/*.kt"
+          - ".github/workflows/ktlint.yml"
     pull_request:
       branches: [ "main" ]
-    release: 
-      branches: [ "main" ]
+      paths:
+          - "**/*.kt"
+          - ".github/workflows/ktlint.yml"
 
 jobs:
+
     linter_job:
+    
        runs-on: ubuntu-latest
+       
        steps:
          - name: Run a one-line script
            run: echo "Job start"
          
          - name: "checkout"
-           uses: actions/checkout@v3
+           uses: actions/checkout@v2
        
          - name: "ktlint"
-           uses: vroy/gha-kotlin-linter@v4
+           uses: vroy/gha-kotlin-linter@v1
 
          - name: Run a one-line script
            run: echo "Job end"
