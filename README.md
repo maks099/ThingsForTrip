@@ -16,5 +16,5 @@ An app for picking up things for a trip
 * Jetpack Compose
 * Volley
 * Room
-* Firebase Firestor / Auth
+* Firebase Firestore / Auth
 * Android Places
