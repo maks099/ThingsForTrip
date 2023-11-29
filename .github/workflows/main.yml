@@ -18,9 +18,6 @@ jobs:
        
          - name: "ktlint"
            uses: vroy/gha-kotlin-linter@v4
-           with:
-            name: app
-            path: app/build/reports/lint-results-debug.html
 
          - name: Run a one-line script
            run: echo "Job end"
