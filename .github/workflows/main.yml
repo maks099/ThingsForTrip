@@ -25,8 +25,10 @@ jobs:
          - name: "checkout"
            uses: actions/checkout@v2
        
-         - name: "ktlint"
-           uses: vroy/gha-kotlin-linter@v1
+         - name: Ktint set up
+           run: curl -sSLO https://github.com/pinterest/ktlint/releases/download/0.50.0/ktlint && chmod a+x ktlint && sudo mv ktlint /usr/local/bin/
+
+         - run: ktlint '!**/build/**'
 
          - name: Run a one-line script
            run: echo "Job end"
