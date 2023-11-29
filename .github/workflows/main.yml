@@ -19,8 +19,8 @@ jobs:
          - name: "checkout"
            uses: actions/checkout@v2
        
-         - name: ktlint
-           uses: ScaCap/action-ktlint@master
+         - name: "ktlint"
+           uses: "vroy/gha-kotlin-linter@v1"
 
          - name: Run a one-line script
            run: echo "Job end"
