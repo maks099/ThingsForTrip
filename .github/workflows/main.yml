@@ -1,5 +1,4 @@
 name: FirstWorkflow
-
 on:
     push:
       branches: [ "main" ]
