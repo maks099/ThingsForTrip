@@ -1,0 +1,22 @@
+name: FirstWorkflow
+on:
+    push:
+      branches: [ "main" ]
+    pull_request:
+      branches: [ "main" ]
+    release: 
+      branches: [ "main" ]
+
+jobs:
+    linter_job:
+       runs-on: windows-latest
+       steps:
+         - uses: actions/checkout@v3
+       
+         - name: Run a one-line script
+           run: echo "Hello, world!"
+          
+      
+         - uses: vroy/gha-kotlin-linter@v4
+           with:
+             patterns: '*.kt'
