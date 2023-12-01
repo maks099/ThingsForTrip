@@ -1,3 +1,4 @@
 [*.{kt,kts}]
 ktlint_no-wildcard-imports = disabled
 ktlint_standard_no-wildcard-imports = disabled
+no-wildcard-imports = false
