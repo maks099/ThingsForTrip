@@ -12,9 +12,12 @@ on:
           - ".github/workflows/main.yml"
 
 jobs:
-
+   
     linter_job:
-    
+       permissions:
+        contents: read
+        packages: read
+        statuses: write
        runs-on: ubuntu-latest
        
        steps:
